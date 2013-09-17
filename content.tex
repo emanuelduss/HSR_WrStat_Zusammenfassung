@@ -7,15 +7,16 @@ ersten Position unabhängige Anzahl $n_2$ Möglichkeiten für den Rest.
 \[ = n_1 \cdot n_2 \text{ Möglichkeiten } \]
 
 \subsection{Permutationen: Reihenfolge}
-Auf wieviele Arten kann man $n$ Objekte anordnen?
+Auf wieviele Arten kann man $n$ Objekte anordnen? (Anzahl Anordnungen)
 \[ = n! \text{ Arten} \]
 
 \subsection{Kombinationen: Auswahl}
 Auf wieviele Arten kann man $k$ Objekte aus $n$ auswählen?
 \[ = C^n_k=\binom{n}{k} = \frac{n!}{k!(n-k)!} \text{ Arten} \]
-Dieser ``Binomialkoeffizient'' lässt sich auf dem Taschenrechner mit
-\texttt{30 nCr 5} (Auf dem TI-36XII unter \texttt{PRB}) oder in Sage/Octave mit
-\texttt{binomial(30,5)} berechnen.
+Dieser "`Binomialkoeffizient"' lässt sich auf dem Taschenrechner
+TI-36XII mit \texttt{n nCr k} (unter \texttt{PRB}), mit dem Voyage 200
+mit \texttt{nCr(n,k)}, in Sage mit \texttt{binomial(n,k)} und in 
+Octave/Matlab mit \texttt{nchoosek(n,k)} berechnen.
 
 Auf wieviele Arten kann man $k$ Mal eine Auswahl aus $n$ Objekten
 treffen?
