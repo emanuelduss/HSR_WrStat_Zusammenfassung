@@ -21,3 +21,37 @@ Octave/Matlab mit \texttt{nchoosek(n,k)} berechnen.
 Auf wieviele Arten kann man $k$ Mal eine Auswahl aus $n$ Objekten
 treffen?
 \[ = n^k \text{ Arten} \]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Ereignisse und Wahrscheinlichkeit}
+\subsection{Vorgehensweise}
+Man braucht ein Experiment.
+\begin{itemize}
+  \item Elementarereignisse $\Omega$ sind alle möglichen Versuchsausgänge
+  \item Ereignis $A \in \Omega$
+  \item Wahrscheinlichkeit dass Ereignis $A$ eintritt ist $P(A)$
+\end{itemize}
+\subsection{Eigenschaften und Regeln}
+\begin{itemize}
+  \item $0 \le P(A) \le 1$: Warscheinlichkeit ist immer zwischen $0$
+    und $1$
+  \item $P(A) < P(B)$: Die Warscheinlichkeit für das Ereignis $A$ ist
+    kleiner als für $B$
+  \item $P(\Omega) = 1$: Das sichere Ereignis tritt immer ein
+  \item $P(\emptyset) = 0$: Das unmöglich Ereignis tritt nie ein
+  \item $P(A \cap B)$: Ereignis $A$ und Ereignis $B$ tritt ein
+    \begin{itemize}
+      \item Falls unabhängig: $= P(A) \cdot P(B)$
+      \item Falls abhängig: Nicht alleine aus $P(A)$ und $P(B)$ berechenbar!
+    \end{itemize}
+  \item $P(A \cup B) = P(A) + P(B) - P(A \cap B)$\footnote{Ein-
+    Ausschaltformel}: Ereignis $A$ oder Ereignis $B$ tritt ein
+    \begin{itemize}
+      \item Falls sich $A$ und $B$ nicht überschneiden\footnote{
+        Paarweise disjunkt: $A$ und $B$ treffen nicht gleichzeitig ein}:
+        $= P(A) + P(B)$
+    \end{itemize}
+  \item $P(A \setminus B) = 1 - P(A)$: Ereignis $A$ tritt ein, aber ohne
+    Ereignis $B$
+  \item $P(\bar{A})$: Ereignis $A$ tritt nicht ein
+\end{itemize}
