@@ -33,7 +33,8 @@ treffen?
   \item Ereignis $A$ tritt ein $\Leftrightarrow \omega \in A$
   \item Wahrscheinlichkeit dass Ereignis $A$ eintritt ist $P(A)$
 \end{itemize}
-\subsection{Eigenschaften und Regeln}
+
+\subsection{Eigenschaften von Wahrscheinlichkeiten}
 \begin{itemize}
   \item $0 \le P(A) \le 1$: Wahrscheinlichkeit ist immer zwischen $0$
     und $1$
@@ -41,6 +42,10 @@ treffen?
     kleiner als für $B$
   \item $P(\Omega) = 1$: Das sichere Ereignis tritt immer ein
   \item $P(\emptyset) = 0$: Das unmöglich Ereignis tritt nie ein
+\end{itemize}
+
+\subsection{Rechnen mit Wahrscheinlichkeiten}
+\begin{itemize}
   \item $P(A \cap B)$: Ereignis $A$ und Ereignis $B$ tritt ein
     \begin{itemize}
       \item Falls unabhängig: $= P(A) \cdot P(B)$
@@ -55,5 +60,21 @@ treffen?
     \end{itemize}
   \item $P(A \setminus B) = 1 - P(A)$: Ereignis $A$ tritt ein, aber ohne
     Ereignis $B$
-  \item $P(\bar{A})$: Ereignis $A$ tritt nicht ein
+  \item $P(\bar{A}) = P(\Omega \setminus A)} = 1 - P(A)$: Ereignis $A$ tritt nicht ein
 \end{itemize}
+
+\subsection{Bedingte Wahrscheinlichkeit}
+Wahrscheinlichkeit, dass $A$ eintritt, wenn wir schon wissen, dass $B$
+eingetreten ist.\footnote{Somit gilt auch: $P(A) = P(A|\Omega)$}
+\[ P(A|B) = \frac{P(A \cap B)}{P(B)}\]
+Falls $A$ und $B$ unabhängig sind:
+\[ P(A|B) = \frac{P(A) P(B)}{P(B)} = P(A) \]
+
+\subsection{Satz der totalen Wahrscheinlichkeit}
+Aus Einzelfällen kann man die Gesamtsituation zusammenstellen:
+\[ P(A) = \sum_{i=1}^{n}P(A|B_i) \cdot P(B_i)\]
+
+\subsubsection{Satz von Bayes}
+Mit dem Satz von Bayes kann man die Schlussrichtung umkehren
+\footnote{Weil $P(A|B) \cdot P(B) = P(A \cap B) = P(B|A) \cdot P(A)$}:
+\[ P(A|B) = P(B|A) \cdot \frac{P(A)}{P(B)} \]
