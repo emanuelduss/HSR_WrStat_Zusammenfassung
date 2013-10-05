@@ -1,6 +1,5 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Kombinatorik (Zählen)}
-
 \subsection{Produktregel: Die Für–jedes–gibt–es–Regel (FJGE)}
 Fur jede der $n_1$ Möglichkeiten gibt es eine von der
 ersten Position unabhängige Anzahl $n_2$ Möglichkeiten für den Rest.
@@ -57,24 +56,26 @@ treffen?
       \item Falls sich $A$ und $B$ nicht überschneiden\footnote{
         Paarweise disjunkt: $A$ und $B$ treffen nicht gleichzeitig ein}:
         $= P(A) + P(B)$
+      \item Drei Ereignisse: $P(A \cup B \cup C) \\ = P(A) + P(B) + P(C)
+        - P(A \cap B) - P(A \cap C) - P(B \cap C) + P(A \cap B \cap C)$
     \end{itemize}
   \item $P(A \setminus B) = 1 - P(A)$: Ereignis $A$ tritt ein, aber ohne
     Ereignis $B$
-  \item $P(\bar{A}) = P(\Omega \setminus A)} = 1 - P(A)$: Ereignis $A$ tritt nicht ein
+  \item $P(\bar{A}) = P(\Omega \setminus A) = 1 - P(A)$: Ereignis $A$ tritt nicht ein
 \end{itemize}
 
 \subsection{Bedingte Wahrscheinlichkeit}
 Wahrscheinlichkeit, dass $A$ eintritt, wenn wir schon wissen, dass $B$
 eingetreten ist.\footnote{Somit gilt auch: $P(A) = P(A|\Omega)$}
-\[ P(A|B) = \frac{P(A \cap B)}{P(B)}\]
+\[ P(A|B) = \frac{P(A \cap B)}{P(B)} \]
 Falls $A$ und $B$ unabhängig sind:
 \[ P(A|B) = \frac{P(A) P(B)}{P(B)} = P(A) \]
 
 \subsection{Satz der totalen Wahrscheinlichkeit}
 Aus Einzelfällen kann man die Gesamtsituation zusammenstellen:
-\[ P(A) = \sum_{i=1}^{n}P(A|B_i) \cdot P(B_i)\]
+\[ P(A) = \sum_{i=1}^{n}P(A|B_i) \cdot P(B_i) \]
 
-\subsubsection{Satz von Bayes}
+\subsection{Satz von Bayes}
 Mit dem Satz von Bayes kann man die Schlussrichtung umkehren
 \footnote{Weil $P(A|B) \cdot P(B) = P(A \cap B) = P(B|A) \cdot P(A)$}:
 \[ P(A|B) = P(B|A) \cdot \frac{P(A)}{P(B)} \]
