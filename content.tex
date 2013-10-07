@@ -52,7 +52,8 @@ treffen?
   \item $P(A \cap B)$: Ereignis $A$ und Ereignis $B$ tritt ein
     \begin{itemize}
       \item Falls unabhängig: $= P(A) \cdot P(B)$
-      \item Falls abhängig: Nicht alleine aus $P(A)$ und $P(B)$ berechenbar!
+      \item Falls abhängig: Nicht alleine aus $P(A)$ und $P(B)$
+        berechenbar!
     \end{itemize}
   \item $P(A \cup B) = P(A) + P(B) - P(A \cap B)$\footnote{Ein-
     Ausschaltformel}: Ereignis $A$ oder Ereignis $B$ tritt ein
@@ -65,7 +66,8 @@ treffen?
     \end{itemize}
   \item $P(A \setminus B) = 1 - P(A)$: Ereignis $A$ tritt ein, aber ohne
     Ereignis $B$
-  \item $P(\bar{A}) = P(\Omega \setminus A) = 1 - P(A)$: Ereignis $A$ tritt nicht ein
+  \item $P(\bar{A}) = P(\Omega \setminus A) = 1 - P(A)$: Ereignis $A$
+    tritt nicht ein
 \end{itemize}
 
 \subsection{Bedingte Wahrscheinlichkeit}
@@ -83,3 +85,24 @@ Aus Einzelfällen kann man die Gesamtsituation zusammenstellen:
 Mit dem Satz von Bayes kann man die Schlussrichtung umkehren
 \footnote{Weil $P(A|B) \cdot P(B) = P(A \cap B) = P(B|A) \cdot P(A)$}:
 \[ P(A|B) = P(B|A) \cdot \frac{P(A)}{P(B)} \]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Erwartungswert und Varianz}
+\subsection{Begriffe}
+\begin{itemize}
+  \item Zufallsvariable $x$ ordnet Elementarereignissen $\omega$ Werte
+    zu: $x: \Omega \rightarrow \mathbb{R}$
+  \item Erwartungswert $E(x) = \sum_i x(w_i) \cdot P(w_i)$
+\end{itemize}
+
+\subsection{Rechnen mit Erwartungswerten}
+\begin{itemize}
+  \item Multiplikation mit einem Faktor $E(\lambda x) = \lambda E(x)$
+  \item Addition zweier Zufallswerte: $E(x + y) = E(x) + E(y)$
+  \item Potenzieren: $E(x^2) \ne E(x)^2$
+  \item Produkt zweier Zufallswerte: $E(x \cdot y) \ne E(x) \cdot E(y)$
+  \begin{itemize}
+    \item Wenn die zwei Werte sich nicht beeinflussen
+      (unabhängig): $E(x \cdot y) = E(x) \cdot E(y)$
+  \end{itemize}
+\end{itemize}
