@@ -93,19 +93,32 @@ Mit dem Satz von Bayes kann man die Schlussrichtung umkehren
 \section{Erwartungswert und Varianz}
 \subsection{Begriffe}
 \begin{itemize}
-  \item Zufallsvariable $x$ ordnet Elementarereignissen $\omega$ Werte
-    zu: $x: \Omega \rightarrow \mathbb{R}$
-  \item Erwartungswert $E(x) = \sum_i x(w_i) \cdot P(w_i)$
+  \item Zufallsvariable $X$ ordnet Elementarereignissen $\omega$ Werte
+    zu: $X: \Omega \rightarrow \mathbb{R}$
+  \item Erwartungswert $E(X) = \sum_{Werte} \text{Wert } \cdot
+    \text{Wahrscheinlichkeit } = \sum_i w_i \cdot P(w_i)$
+  \item Empirischer Erwartungswert = arithmetisches Mittel:
+    $E(X) = \frac{1}{n} \sum_{i=1}^n x_i$
 \end{itemize}
+\subsubsection{Spezielle Zufallsvariable}
+Charakteristische Funktion von $A$:
+\[ \chi_A = \begin{cases}1 & w \in A \\ 0 & sonst \end{cases} \]
+\[ E(X) = 0 \cdot P(\bar{A}) + 1 \cdot P(A) = P(A) \]
 
 \subsection{Rechnen mit Erwartungswerten}
 \begin{itemize}
-  \item Multiplikation mit einem Faktor $E(\lambda x) = \lambda E(x)$
-  \item Addition zweier Zufallswerte: $E(x + y) = E(x) + E(y)$
-  \item Potenzieren: $E(x^2) \ne E(x)^2$
-  \item Produkt zweier Zufallswerte: $E(x \cdot y) \ne E(x) \cdot E(y)$
+  \item Multiplikation mit einem Faktor $E(\lambda X) = \lambda E(X)$
+  \item Addition zweier Zufallswerte: $E(X + Y) = E(X) + E(Y)$
+  \item Produkt zweier Zufallswerte: $E(X \cdot Y) \ne E(X) \cdot E(Y)$
   \begin{itemize}
+    \item Potenzieren (immer abhängig): $E(X^2) \ne E(X)^2$
     \item Wenn die zwei Werte sich nicht beeinflussen
-      (unabhängig): $E(x \cdot y) = E(x) \cdot E(y)$
+      (unabhängig): $E(X \cdot Y) = E(X) \cdot E(Y)$
   \end{itemize}
+\end{itemize}
+
+\subsection{Streubreite (Varianz)}
+\begin{itemize}
+  \item Varianz $\text{var}(x) = E((X - E(X))^2) = E(X^2) - E(X)^2$
+  \item Abstand ($\pm$) zum Erwartungswert: $\sqrt{\text{var}(x)}$
 \end{itemize}
