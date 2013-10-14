@@ -91,11 +91,13 @@ Mit dem Satz von Bayes kann man die Schlussrichtung umkehren
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Erwartungswert und Varianz}
-\subsection{Begriffe}
+\subsection{Erwartungswert}
+\subsubsection{Begriffe}
 \begin{itemize}
   \item Zufallsvariable $X$ ordnet Elementarereignissen $\omega$ Werte
     zu: $X: \Omega \rightarrow \mathbb{R}$
-  \item Erwartungswert $E(X) = \sum_{Werte} \text{Wert } \cdot
+  \item Erwartungswert (Zufallsvariable im Mittel): \\
+    $E(X) = \sum_{Werte} \text{Wert } \cdot
     \text{Wahrscheinlichkeit } = \sum_i w_i \cdot P(w_i)$
   \item Empirischer Erwartungswert = arithmetisches Mittel:
     $E(X) = \frac{1}{n} \sum_{i=1}^n x_i$
@@ -105,7 +107,7 @@ Charakteristische Funktion von $A$:
 \[ \chi_A = \begin{cases}1 & w \in A \\ 0 & sonst \end{cases} \]
 \[ E(X) = 0 \cdot P(\bar{A}) + 1 \cdot P(A) = P(A) \]
 
-\subsection{Rechnen mit Erwartungswerten}
+\subsubsection{Rechnen mit Erwartungswerten}
 \begin{itemize}
   \item Multiplikation mit einem Faktor $E(\lambda X) = \lambda E(X)$
   \item Addition zweier Zufallswerte: $E(X + Y) = E(X) + E(Y)$
@@ -117,8 +119,54 @@ Charakteristische Funktion von $A$:
   \end{itemize}
 \end{itemize}
 
-\subsection{Streubreite (Varianz)}
+\subsection{Varianz (Streubreite)}
+\subsubsection{Begriffe}
 \begin{itemize}
-  \item Varianz $\text{var}(x) = E((X - E(X))^2) = E(X^2) - E(X)^2$
+  \item Varianz (Mass für die mittlere Abweichung):
+    $\text{var}(x) = E((X - E(X))^2) = E(X^2) - E(X)^2$
   \item Abstand ($\pm$) zum Erwartungswert: $\sqrt{\text{var}(x)}$
 \end{itemize}
+\subsubsection{Rechenregeln für Varianz}
+\begin{itemize}
+  \item $\text{var}(\lambda X) = \lambda^2 \text{var}(X)$
+  \item $\text{var}(X+Y) = \text{var}(X) + \text{var}(Y)$
+  \item $\text{var}(X \cdot Y) = \text{var}(X) \text{var}(Y) +
+  \text{var}(Y)E(X)^2 + \text{var}(X)E(Y)^2$
+\end{itemize}
+
+\subsection{Mittelwert}
+\subsubsection{Begriffe}
+\begin{itemize}
+  \item Erwartungswert der Zufallsvariablen $X$: $\mu = E(X)$
+  \item Varianz: Abweichung der Zufallsvariabeln von ihrem
+    Erwartungswert: $X -\mu$
+  \item Wie häufig überschreitet die Abweichung $\epsilon$?
+  \item Wie wahrscheinlich ist es, dass die Abweichung gross ist?
+    $P(|X - \mu| > \epsilon)$
+  \item Faustregel: 10 mal mehr Genauigkeit = 100 mal mehr Arbeit.
+\end{itemize}
+\subsubsection{Ungleichung von Tschebyscheff}
+Wahrscheinlichkeit, dass Zufallsvariable $X$ um mehr als $\epsilon$ vonm
+Erwartungswert abweicht:
+\[P(X|-\mu| > \epsilon) \le \frac{\text{var}(X)}{\epsilon^2} \]
+\subsubsection{Wie gut ist der Mittelwert?}
+\begin{itemize}
+  \item Mittelwert: $M_n = \frac{X_1 + X_2 + \ldots + X_n}{n}$
+  \item Erwartungswert: $E(X_i) = E\left( \frac{X_1 + X_2 + \ldots +
+  X_n}{n}\right) =  \frac{E(X_1) + E(X_2) + \ldots + E(X_n)}{n} = \mu$
+  \item Varianz: $\text{var}(X_i) = \sigma^2$
+  \item Varianz: $\text{var}(M_n) = \frac{1}{n^2} \sum_{i=1}^n
+  \text{var}(X_i) = \frac{\sigma^2}{n}$
+\end{itemize}
+\paragraph{Bernoullis Gesetz der grossen Zahlen}
+Die Wahrscheinlichkeit, dass der Mittelwert von $n$ unabhängigen
+Zufallsvariabeln mit Mittelwert $\mu$ und Varianz $\sigma^2$ mehr als
+$\epsilon$ von $\mu$ abweicht, ist:
+\[P(|X-\mu| > \epsilon) \le \frac{\text{var}(X)}{\epsilon^2} \]
+Die Abweichung ist unwahrscheinlich, wenn:
+\begin{itemize}
+  \item Varianz ist klein (genaues Messgerät)
+  \item $\epsilon$ ist gross (man ist toleranter)
+  \item $n$ ist gross (viele Messungen)
+\end{itemize}
+
