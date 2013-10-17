@@ -109,7 +109,7 @@ Charakteristische Funktion von $A$:
 
 \subsubsection{Rechnen mit Erwartungswerten}
 \begin{itemize}
-  \item Multiplikation mit einem Faktor $E(\lambda X) = \lambda E(X)$
+  \item Multiplikation mit einem Faktor: $E(\lambda X) = \lambda E(X)$
   \item Addition zweier Zufallswerte: $E(X + Y) = E(X) + E(Y)$
   \item Produkt zweier Zufallswerte: $E(X \cdot Y) \ne E(X) \cdot E(Y)$
   \begin{itemize}
@@ -128,10 +128,12 @@ Charakteristische Funktion von $A$:
 \end{itemize}
 \subsubsection{Rechenregeln für Varianz}
 \begin{itemize}
-  \item $\text{var}(\lambda X) = \lambda^2 \text{var}(X)$
-  \item $\text{var}(X+Y) = \text{var}(X) + \text{var}(Y)$
-  \item $\text{var}(X \cdot Y) = \text{var}(X) \text{var}(Y) +
-  \text{var}(Y)E(X)^2 + \text{var}(X)E(Y)^2$
+  \item Multiplikation mit einem Faktor:
+    $\text{var}(\lambda X) = \lambda^2 \text{var}(X)$
+  \item Addition ($X$ und $Y$ sind unabhängit):
+    $\text{var}(X+Y) = \text{var}(X) + \text{var}(Y)$
+  \item Multiplikation: $\text{var}(X \cdot Y) = \text{var}(X)
+    \text{var}(Y) + \text{var}(Y)E(X)^2 + \text{var}(X)E(Y)^2$
 \end{itemize}
 
 \subsection{Mittelwert}
@@ -169,4 +171,3 @@ Die Abweichung ist unwahrscheinlich, wenn:
   \item $\epsilon$ ist gross (man ist toleranter)
   \item $n$ ist gross (viele Messungen)
 \end{itemize}
-
