@@ -184,12 +184,32 @@ Die Abweichung ist unwahrscheinlich, wenn:
 Seien $X$ und $Y$ zwei reelle Zufallsvariablen. Die Gerade mit der
 Gleichung $y = ax + b$ minimiert die Varianz $\text{var}(aX + b -Y)$
 genau dann, wenn
-\[ a = \frac{\text{cov}(X,Y)}{\text{var}(X)}
-  \text{ und } b = E(Y) - aE(X) \]
+\begin{align*}
+  a & = \frac{\text{cov}(X,Y)}{\text{var}(X)} = \frac{E(XY)
+        - E(X)E(Y)}{E(X^2) - E(X)^2} \\
+  b & = E(Y) - E(X)a
+\end{align*}
 Die Regression ist umso genauer, je näher der Regressionskoeffizient $r$
 bei $\pm 1$ liegt. Zudem hat $r$ immer das gleiche Vorzeichen wie die
 Steitung der Regressionsgerade.
 \[ r = \frac{\text{cov}(X,Y)}{\sqrt{\text{var}(X)\text{var}(Y)}} \]
+
+Zur Berechnung der Regression eignet sich folgende Tabelle sehr gut,
+damit man alle Werte im Überblick hat:
+
+\begin{tabular}{|l|l|l|l|l|l|}
+  \hline
+  $i$    & $x_i$    & $y_i$    & ${x_i}^2$    & ${y_i}^2$  & $x_iy_i$ \\
+  \hline
+  \vdots & \vdots   & \vdots   & \vdots       & \vdots       & \vdots \\
+  \hline
+  $E$ & $E(x_i)$ & $E(y_i)$ & $E({x_i}^2)$ & $E({y_i}^2)$ & $E(x_iy_i)$ \\
+  \hline
+\end{tabular}
+\begin{itemize}
+  \item Punkt auf X-Achse: $x_i$
+  \item Punkt auf Y-Achse: $y_i$
+\end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Wahrscheinlichkeitsverteilung}
