@@ -173,3 +173,31 @@ Die Abweichung ist unwahrscheinlich, wenn:
   \item $\varepsilon$ ist gross (man ist toleranter)
   \item $n$ ist gross (viele Messungen)
 \end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Wahrscheinlichkeitsverteilung}
+\subsection{Begriffe}
+\begin{itemize}
+  \item Verteilungsfunktion $F$ von $X$: $F_X(x)$
+  \item Ableitung von $F$ (Wahrscheinlichkeitsdichte / Dichtefunktion): $F'(x)$
+  \item Formen der Verteilungsfunktion
+  \begin{itemize}
+    \item Diskret: $F$ ist stückweise konstant (Treppenstufen)
+    \item Stetig: $F$ ist ist stetig
+  \end{itemize}
+  \item Eigenschaften
+  \begin{itemize}
+    \item Verteilfunktion zwischen $0$ und $1$: $0 \le F_X(x) \le 1$
+    \item Grenzwerte: $\lim_{x \to -\infty} F_X(x) = 0$ und $\lim_{x \to \infty} F_X(x) = 1$
+    \item $F$ ist monoton wachsend: $a \le b \Rightarrow F(a) \le F(b)$
+  \end{itemize}
+\end{itemize}
+\subsection{Wahrscheinlichkeit berechnen}
+\begin{itemize}
+   \item $F_X(x) = P(X \le x)$
+\end{itemize}
+\subsection{Erwartungswert berechnen}
+\begin{itemize}
+  \item $F$ ist diskret: % TODO
+  \item $F$ ist stetig: $E(X) = \int_{-\infty}^{\infty}F'(x)dx$
+\end{itemize}
