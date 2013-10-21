@@ -144,15 +144,15 @@ Charakteristische Funktion von $A$:
   \item Erwartungswert der Zufallsvariablen $X$: $\mu = E(X)$
   \item Varianz: Abweichung der Zufallsvariabeln von ihrem
     Erwartungswert: $X -\mu$
-  \item Wie häufig überschreitet die Abweichung $\epsilon$?
+  \item Wie häufig überschreitet die Abweichung $\varepsilon$?
   \item Wie wahrscheinlich ist es, dass die Abweichung gross ist?
-    $P(|X - \mu| > \epsilon)$
+    $P(|X - \mu| > \varepsilon)$
   \item Faustregel: 10 mal mehr Genauigkeit = 100 mal mehr Arbeit.
 \end{itemize}
 \subsubsection{Ungleichung von Tschebyscheff}
-Wahrscheinlichkeit, dass Zufallsvariable $X$ um mehr als $\epsilon$ vonm
+Wahrscheinlichkeit, dass Zufallsvariable $X$ um mehr als $\varepsilon$ vonm
 Erwartungswert abweicht:
-\[P(X|-\mu| > \epsilon) \le \frac{\text{var}(X)}{\epsilon^2} \]
+\[P(X|-\mu| > \varepsilon) \le \frac{\text{var}(X)}{\varepsilon^2} \]
 \subsubsection{Wie gut ist der Mittelwert?}
 \begin{itemize}
   \item Mittelwert: $M_n = \frac{X_1 + X_2 + \ldots + X_n}{n}$
@@ -165,11 +165,11 @@ Erwartungswert abweicht:
 \paragraph{Bernoullis Gesetz der grossen Zahlen}
 Die Wahrscheinlichkeit, dass der Mittelwert von $n$ unabhängigen
 Zufallsvariabeln mit Mittelwert $\mu$ und Varianz $\sigma^2$ mehr als
-$\epsilon$ von $\mu$ abweicht, ist:
-\[P(|X-\mu| > \epsilon) \le \frac{\text{var}(X)}{\epsilon^2} \]
+$\varepsilon$ von $\mu$ abweicht, ist:
+\[P(|X-\mu| > \varepsilon) \le \frac{\text{var}(X)}{\varepsilon^2} \]
 Die Abweichung ist unwahrscheinlich, wenn:
 \begin{itemize}
   \item Varianz ist klein (genaues Messgerät)
-  \item $\epsilon$ ist gross (man ist toleranter)
+  \item $\varepsilon$ ist gross (man ist toleranter)
   \item $n$ ist gross (viele Messungen)
 \end{itemize}
