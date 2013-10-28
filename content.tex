@@ -244,3 +244,13 @@ damit man alle Werte im Überblick hat:
   \item $F$ ist diskret: % TODO
   \item $F$ ist stetig: $E(X) = \int_{-\infty}^{\infty}x F'(x)dx$
 \end{itemize}
+
+\subsection{Rechenregeln für die Verteilungsfunktion}
+\begin{itemize}
+  \item Multiplikation mit einem Faktor $\lambda > 0$: $F_{\lambda X}(x)=
+    P(\lambda X \le x) = P(X \le \frac{x}{\lambda}) =
+    F_X(\frac{x}{\lambda})$
+  \item Addition: $F_{X+a}(x) = P(X+a \le x) = P(X \le x-a) = F_X(x-a)$
+  \item Quadrieren: $F_{X^2}(x) = P(X^2 \le x) = P(X \le \sqrt{x}) =
+    F_X(\sqrt{x})$
+\end{itemize}
