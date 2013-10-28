@@ -125,7 +125,8 @@ Charakteristische Funktion von $A$:
 \begin{itemize}
   \item Varianz (Mass für die mittlere Abweichung):
     $\text{var}(x) = E((X - E(X))^2) = E(X^2) - E(X)^2$
-  \item Kovarianz (Verschiebungssatz): $\text{cov}(X,Y) = E(XY) - E(X)E(Y)$
+  \item Kovarianz (Verschiebungssatz):
+    $\text{cov}(X,Y) = E(XY) - E(X)E(Y)$
   \item Abstand ($\pm$) zum Erwartungswert: $\sqrt{\text{var}(x)}$
 \end{itemize}
 \subsubsection{Rechenregeln für Varianz}
@@ -135,13 +136,14 @@ Charakteristische Funktion von $A$:
   \item Addition (nur wenn $X$ und $Y$ unabhängig):
     $\text{var}(X+Y) = \text{var}(X) + \text{var}(Y)$
     \begin{itemize}
-      \item Achtung ($(-x)^2 = +x$): $\text{var}(X-Y) = \text{var}(X) + \text{var}(-Y) =
-        \text{var}(X) + \text{var}(Y)$
+      \item Achtung ($(-x)^2 = +x$): $\text{var}(X-Y) = \text{var}(X)
+        + \text{var}(-Y) = \text{var}(X) + \text{var}(Y)$
     \end{itemize}
   \item Multiplikation: $\text{var}(X \cdot Y) = \text{var}(X)
     \text{var}(Y) + \text{var}(Y)E(X)^2 + \text{var}(X)E(Y)^2$
   \item Varianz einer Konstante $c$: $\text{var}(c) = 0$
-  \item Kovarianz als Verallgemeinerung der Varianz: $\text{var}(X) = \text{cov}(X,X)$
+  \item Kovarianz als Verallgemeinerung der Varianz:
+    $\text{var}(X) = \text{cov}(X,X)$
 \end{itemize}
 
 \subsection{Mittelwert}
@@ -156,8 +158,8 @@ Charakteristische Funktion von $A$:
   \item Faustregel: 10 mal mehr Genauigkeit = 100 mal mehr Arbeit.
 \end{itemize}
 \subsubsection{Ungleichung von Tschebyscheff}
-Wahrscheinlichkeit, dass Zufallsvariable $X$ um mehr als $\varepsilon$ vom
-Erwartungswert abweicht:
+Wahrscheinlichkeit, dass Zufallsvariable $X$ um mehr als $\varepsilon$
+vom Erwartungswert abweicht:
 \[P(X|-\mu| > \varepsilon) \le \frac{\text{var}(X)}{\varepsilon^2} \]
 \subsubsection{Wie gut ist der Mittelwert?}
 \begin{itemize}
@@ -216,7 +218,8 @@ damit man alle Werte im Überblick hat:
 \subsection{Begriffe}
 \begin{itemize}
   \item Verteilungsfunktion $F$ von $X$: $F_X(x)$
-  \item Ableitung von $F$ (Wahrscheinlichkeitsdichte / Dichtefunktion): $F'(x)$
+  \item Ableitung von $F$ (Wahrscheinlichkeitsdichte / Dichtefunktion):
+    $F'(x)$
   \item Formen der Verteilungsfunktion
   \begin{itemize}
     \item Diskret: $F$ ist stückweise konstant (Treppenstufen)
@@ -225,7 +228,8 @@ damit man alle Werte im Überblick hat:
   \item Eigenschaften
   \begin{itemize}
     \item Verteilfunktion zwischen $0$ und $1$: $0 \le F_X(x) \le 1$
-    \item Grenzwerte: $\lim_{x \to -\infty} F_X(x) = 0$ und $\lim_{x \to \infty} F_X(x) = 1$
+    \item Grenzwerte: $\lim_{x \to -\infty} F_X(x) = 0$ 
+      und $\lim_{x \to \infty} F_X(x) = 1$
     \item $F$ ist monoton wachsend: $a \le b \Rightarrow F(a) \le F(b)$
   \end{itemize}
 \end{itemize}
