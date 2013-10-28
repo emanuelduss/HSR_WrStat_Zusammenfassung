@@ -220,12 +220,12 @@ damit man alle Werte im Überblick hat:
   \item Verteilungsfunktion $F$ von $X$: $F_X(x)$
   \item Ableitung von $F$ (Wahrscheinlichkeitsdichte / Dichtefunktion):
     $F'(x)$
-  \item Formen der Verteilungsfunktion
+  \item Formen der Zufallsvariabeln
   \begin{itemize}
     \item Diskret: $F$ ist stückweise konstant (Treppenstufen)
     \item Stetig: $F$ ist ist stetig
   \end{itemize}
-  \item Eigenschaften
+  \item Eigenschaften der Verteilungsfunktion
   \begin{itemize}
     \item Verteilfunktion zwischen $0$ und $1$: $0 \le F_X(x) \le 1$
     \item Grenzwerte: $\lim_{x \to -\infty} F_X(x) = 0$ 
@@ -233,12 +233,14 @@ damit man alle Werte im Überblick hat:
     \item $F$ ist monoton wachsend: $a \le b \Rightarrow F(a) \le F(b)$
   \end{itemize}
 \end{itemize}
+
 \subsection{Wahrscheinlichkeit berechnen}
 \begin{itemize}
    \item $F_X(x) = P(X \le x)$
 \end{itemize}
+
 \subsection{Erwartungswert berechnen}
 \begin{itemize}
   \item $F$ ist diskret: % TODO
-  \item $F$ ist stetig: $E(X) = \int_{-\infty}^{\infty}F'(x)dx$
+  \item $F$ ist stetig: $E(X) = \int_{-\infty}^{\infty}x F'(x)dx$
 \end{itemize}
