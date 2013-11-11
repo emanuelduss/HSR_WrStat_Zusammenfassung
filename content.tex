@@ -256,3 +256,85 @@ damit man alle Werte im Überblick hat:
   \item Addition zweier diskreten Zufallszahlen:
     $F_{X+Y}(x) = \sum_x P(X=x)P(Y=z-x)$
 \end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Katalog von Wahrscheinlichkeitsverteilungen}
+\subsection{Gleichverteilung (stetig)}
+\begin{description}
+  \item[Anwendung] Zufallszahlen
+  \item[Verteilungsfunktion] \[F(x) = \begin{cases} 0 & x < a \\
+    \frac{x-a}{b-a} & x \in [a,b] \\ 1 & x > b\end{cases}\]
+  \item[Wahrscheinlichkeitsdichte] \[\phi(x) = \begin{cases} 0 & x < a \\
+    \frac{1}{a} & x \in [a,b] \\ 0 & x > b\end{cases}\]
+  \item[Erwartungswert] Sei $X$ eine in $[a,b]$ gleichverteilte
+    Zufallsvariable, dann gilt \[E(X) = \frac{a+b}{2}\]
+  \item[Varianz] \[\text{var}(X) = \frac{(a-b)^2}{12}\]
+  \item[Wahrscheinlichkeit einer grossen Abweichung] Für $\varepsilon >
+  \frac{b-a}{2}$ ist die Wahrscheinlichkeit $P(|X-\mu| > \varepsilon)$
+    einer Abweichung vom Erwartungswert $\mu = E(X)$ natürlich 0, aber für
+    kleinere $\varepsilon$ ergibt sich
+    \[P(|X-\mu| > \varepsilon) = 1 - \frac{2\varepsilon}{b-a}\]
+\end{description}
+
+\subsection{Exponentialverteilung (stetig)}
+\begin{description}
+  \item[Anwendung] Prozess ohne Erinnerungsvermögen, Radioaktivität
+  \item[Dichtefunktion] \[\phi(x) = \begin{cases}0 & x < 0 \\ ae^{-ax} &
+    x \geq 0\end{cases}\]
+  \item[Verteilungsfuntkion] \[F(x) = \begin{cases}0 & x < 0 \\
+    1-e^{-ax} & x \geq 0\end{cases}\]
+  \item[Erwartungswert] \[E(X) = \frac{1}{a}\]
+  \item[Varianz] \[\text{var}(X) = \frac{1}{a^2}\]
+  \item[Wahrscheinlichkeit grosser Abweichung] Für eine
+    exponentialverteilte Zufallsvariable mit dem Erwartungswert
+    $\frac{1}{a}$ ist die Wahrscheinlichkeit einer Abweichung
+    $\varepsilon$ vom Erwartungswert \[P(|X-\frac{1}{a}| > \varepsilon) =
+    \begin{cases}e^{-a\varepsilon-1} & \varepsilon > \frac{1}{a} \\
+    1 - e^{a\varepsilon-1} + e^{-a\varepsilon-1} & \varepsilon \leq
+    \frac{1}{a}\end{cases}\]
+\end{description}
+
+\subsection{Binomialverteilung (diskret)}
+\begin{description}
+  \item[Anwendungen] Anzahl Einheiten eines Bernoullie-Ereignisses bei
+    $n$ Wiederholungen ($2$ mögliche Versuchsausgänge).
+  \item[Wahrscheinlichkeit] Eine Zufallsvariable mit diskreten Werten
+    $k \in \{0, \dots, n\}$ heisst binomialverteilt zum Parameter $p$,
+    wenn folgendes die Wahrscheinlichkeit des Wertes $k$ ist.
+  \[P(X = k) = \binom{n}{k} p^k(1-p)^{n-k}\]
+  \item[Erwartungswert] \[E(X) = pn\]
+  \item[Varianz] \[\text{var}(X) = np(1-p)\]
+    Maximale Varianz wird erreicht bei $p = \frac{1}{2}$
+\end{description}
+
+\subsection{Poissonverteilung (diskret)}
+\begin{description}
+  \item[Anwendung] Anzahl Eintreten in einem Zeitintervall, wenn die
+    Zeitabstände exponentiell verteilt sind.
+  \item[Verteilungsfunktion] Sind $(X_i)1 \leq i \leq k$
+  exponentialverteilte, unabhängige Zufallsvariablen, dann gilt für die
+  Summe:
+  \[F_{X_i+\dots+x_k}(x) = \begin{cases}1 - e^{-ax} \sum_{i=0}^{k-1}
+  \frac{(ax)^i}{i!} & x \geq 0 \\ 0 & x < 0\end{cases}\]
+  \item[Wahrscheinlichkeitsdichte]
+  \[\phi_{X_i+\dots+x_k}(x) = \begin{cases}a^k \frac{k^{k-1}}{(k-1)!}
+  e^{-ax} & x \geq 0 \\ 0 & x < 0\end{cases}\]
+  \item[Wahrscheinlichkeit] Beschreibt für $\lambda = ax$ die
+    Wahrscheinlichkeit, dass in einem Zeitintervall $[0, x]$ genau $k$
+    Ereignisse eintregen, wenn die Zeit zwischen den Ereignissen
+    exponentialverteilt ist mit der Dichte $ae^{-ax}$ ($\lambda$ = Rate,
+    in der Ereignisse auftregen).
+    \[P_\lambda(k) = e^{-\lambda} \cdot \frac{\lambda^k}{k!}\]
+  \item[Erwartungswert] \[E(X) = \lambda\]
+  \item[Varianz] \[\text{var}(X) = \lambda\]
+\end{description}
+
+\subsection{Normalverteilung / Gaussverteilung (stetig)}
+\begin{description}
+  \item[Anwendung] Messfehler, Summe von vielen voneinander
+  unabhängigenn Zufallsvariabeln
+  \item[Dichtefunktion] \[\phi(x) = \frac{1}{\sigma \sqrt{2\pi}} \cdot
+    e^{-\frac{1}{2}{\left(\frac{x-\mu}{\sigma}\right)}^2}\]
+  \item[Verteilungsfunktion] \[E(X) = \mu\]
+  \item[Varianz] \[\text{var}(X) = \sigma^2\]
+\end{description}
