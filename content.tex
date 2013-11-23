@@ -263,7 +263,8 @@ damit man alle Werte im Überblick hat:
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Katalog von Wahrscheinlichkeitsverteilungen}
-\subsection{Gleichverteilung (stetig)}
+\subsection{Stetige Wahrscheinlichkeitsverteilungen}
+\subsubsection{Gleichverteilung}
 Sei $X$ eine in $[a,b]$ gleichverteilte Zufallsvariable, dann gilt:
 \begin{description}
   \item[Anwendung] Verteilung von Zufallszahlen
@@ -281,7 +282,7 @@ Sei $X$ eine in $[a,b]$ gleichverteilte Zufallsvariable, dann gilt:
     \[P(|X-\mu| > \varepsilon) = 1 - \frac{2\varepsilon}{b-a}\]
 \end{description}
 
-\subsection{Exponentialverteilung (stetig)}
+\subsubsection{Exponentialverteilung}
 \begin{description}
   \item[Anwendung] Prozess ohne Erinnerungsvermögen, Radioaktivität
   \item[Dichtefunktion] \[\phi(x) = \begin{cases}0 & x < 0 \\ ae^{-ax} &
@@ -300,7 +301,40 @@ Sei $X$ eine in $[a,b]$ gleichverteilte Zufallsvariable, dann gilt:
     \frac{1}{a}\end{cases}\]
 \end{description}
 
-\subsection{Binomialverteilung (diskret)}
+\subsubsection{Normalverteilung / Gaussverteilung}
+\begin{description}
+  \item[Anwendung] Messfehler, Summe von vielen voneinander
+    unabhängigenn Zufallsvariabeln, Approximation der Binomialverteilung
+  \item[Dichtefunktion] \[\phi(x) = \frac{1}{\sigma \sqrt{2\pi}} \cdot 
+    e^{-\frac{1}{2}{\left(\frac{x-\mu}{\sigma}\right)}^2} =
+    \frac{1}{\sigma \sqrt{2\pi}} \cdot e^{-\frac{(x-\mu)^2}{2\sigma^2}}\]
+  \item[Erwartungswert] \[E(X) = \mu\]
+  \item[Varianz] \[\text{var}(X) = \sigma^2\]
+  \item[Median] \[\text{med}(X) = \mu\]
+  \item[Wahrscheinlichkeit] Keine einfache Formel für
+    $P(|X - E(X)| > \varepsilon)$
+\end{description}
+
+% \subsection{2-Verteilung}
+
+\subsubsection{Potenzverteilung / Pareto-Verteilung}
+\begin{description}
+  \item[Anwendung] Häufkeitsverteilung für skaleninvariante Prozesse,
+    Einkommensverteilung Grösse und Häufigkeit von Mondkratern,
+    Verkaufszahlen von Büchern, Einwohnerzahlen von Städten
+  \item[Dichtefunktion] \[ \phi(X) = \begin{cases} Cx^{-\alpha} & x \geq
+    x_{min} \\ 0 & x < x_{min}\end{cases} \] Typische Werte für $\alpha$:
+    $1 \leq \alpha \leq 3$
+  \item[Verteilungsfunktion]
+  \item[Varianz]
+  \item[Median]
+  \item[Wahrscheinlichkeit]
+\end{description}
+
+\subsection{Diskrete Wahrscheinlichkeitsverteilungen}
+%\subsubsection{Gleichverteilung}
+
+\subsubsection{Binomialverteilung}
 \begin{description}
   \item[Anwendungen] Anzahl Einheiten eines Bernoulli-Ereignisses bei
     $n$ Wiederholungen ($2$ mögliche Versuchsausgänge).
@@ -317,7 +351,9 @@ Sei $X$ eine in $[a,b]$ gleichverteilte Zufallsvariable, dann gilt:
   ausgehen, dass die Zufallsvariable $X$ annähernd normalverteilt ist.
 \end{description}
 
-\subsection{Poissonverteilung (diskret)}
+%\subsubsection{Hypergeometrische Verteilung}
+
+\subsubsection{Poissonverteilung}
 \begin{description}
   \item[Anwendung] Anzahl Ereignisse in einem Zeitintervall, wenn die
     Zeitabstände exponentiell verteilt sind. Approximation der
@@ -339,34 +375,6 @@ Sei $X$ eine in $[a,b]$ gleichverteilte Zufallsvariable, dann gilt:
     \[P_\lambda(k) = e^{-\lambda} \cdot \frac{\lambda^k}{k!}\]
   \item[Erwartungswert] \[E(X) = \lambda\]
   \item[Varianz] \[\text{var}(X) = \lambda\]
-\end{description}
-
-\subsection{Normalverteilung / Gaussverteilung (stetig)}
-\begin{description}
-  \item[Anwendung] Messfehler, Summe von vielen voneinander
-    unabhängigenn Zufallsvariabeln, Approximation der Binomialverteilung
-  \item[Dichtefunktion] \[\phi(x) = \frac{1}{\sigma \sqrt{2\pi}} \cdot 
-    e^{-\frac{1}{2}{\left(\frac{x-\mu}{\sigma}\right)}^2} =
-    \frac{1}{\sigma \sqrt{2\pi}} \cdot e^{-\frac{(x-\mu)^2}{2\sigma^2}}\]
-  \item[Erwartungswert] \[E(X) = \mu\]
-  \item[Varianz] \[\text{var}(X) = \sigma^2\]
-  \item[Median] \[\text{med}(X) = \mu\]
-  \item[Wahrscheinlichkeit] Keine einfache Formel für
-    $P(|X - E(X)| > \varepsilon)$
-\end{description}
-
-\subsection{Potenzverteilung / Pareto-Verteilung}
-\begin{description}
-  \item[Anwendung] Häufkeitsverteilung für skaleninvariante Prozesse,
-    Einkommensverteilung Grösse und Häufigkeit von Mondkratern,
-    Verkaufszahlen von Büchern, Einwohnerzahlen von Städten
-  \item[Dichtefunktion] \[ \phi(X) = \begin{cases} Cx^{-\alpha} & x \geq
-    x_{min} \\ 0 & x < x_{min}\end{cases} \] Typische Werte für $\alpha$:
-    $1 \leq \alpha \leq 3$
-  \item[Verteilungsfunktion]
-  \item[Varianz]
-  \item[Median]
-  \item[Wahrscheinlichkeit]
 \end{description}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
