@@ -377,6 +377,21 @@ Sei $X$ eine in $[a,b]$ gleichverteilte Zufallsvariable, dann gilt:
   \item[Varianz] \[\text{var}(X) = \lambda\]
 \end{description}
 
+\subsubsection{Poissonverteilung als Approximation für die
+Binomialverteilung}
+\begin{itemize}
+  \item Zufallsvariable $X$ ist binomialverteilt
+  \item Ist $n$ bei der Binomialverteilung gross, ist diese nicht
+    durchführbar (zulange Rechenzeit).
+  \item Ist $X$ annähernd normalverteilt, gilt:
+    $E(X) \mu = np$ und $\text{var}(X) = \tau^2 = np(1-p)$
+\end{itemize}
+Verteilfunktion:
+\[ P(X \le x) = P\left(\frac{X - \mu}{\sigma} \le
+  \frac{x-\mu}{\sigma}\right) = F\left(\frac{x-np}{\sqrt{np(1-p)}}\right)\]
+Poissonverteilung zum Parameter $\lambda$:
+\[ P_{\lambda}(k) = e^{-\lambda} \frac{\lambda^k}{k!}\]
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Anhang}
 \subsection{Summenformeln}
