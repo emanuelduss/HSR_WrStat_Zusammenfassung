@@ -262,6 +262,19 @@ damit man alle Werte im Überblick hat:
     $F_{X+Y}(x) = \sum_x P(X=x)P(Y=z-x)$
 \end{itemize}
 
+\subsection{Standardisierung der Gleichverteilung}
+Ist $X$ eine Zufallsvariable mit Erwartungswert $\mu$ und Varianz
+$\sigma^2$, dann ist
+\[ Y = \frac{X-\mu}{\sigma} \]
+eine neue Zufallsvariable $Y$ mit $E(Y) = 0$ und $\text{var}(Y) = 0$.
+Zwischen den Verteilungsfunktionen $F_X$ und $F_Y$ bestehen die
+Beziehungen:
+\[ F_Y(y) = F_X(y\sigma+\mu) \qquad
+  F_X(x)=F_Y\left(\frac{x-\mu}{\sigma}\right) \]
+Hat die Verteilungsfunktion eine Dichte, dann gilt zudem:
+\[ \phi_Y(y) = \sigma \phi_X(y\sigma+\mu) \qquad \phi_X(x) =
+  \frac{1}{\sigma} \phi_Y\left(\frac{x-\mu}\sigma\right) \]
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Katalog von Wahrscheinlichkeitsverteilungen}
 \subsection{Stetige Wahrscheinlichkeitsverteilungen}
