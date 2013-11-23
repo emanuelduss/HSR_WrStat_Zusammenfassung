@@ -270,7 +270,7 @@ Sei $X$ eine in $[a,b]$ gleichverteilte Zufallsvariable, dann gilt:
   \item[Verteilungsfunktion] \[F(x) = \begin{cases} 0 & x < a \\
     \frac{x-a}{b-a} & x \in [a,b] \\ 1 & x > b\end{cases}\]
   \item[Wahrscheinlichkeitsdichte] \[\phi(x) = \begin{cases} 0 & x < a \\
-    \frac{1}{a} & x \in [a,b] \\ 0 & x > b\end{cases}\]
+    \frac{1}{b-a} & x \in [a,b] \\ 0 & x > b\end{cases}\]
   \item[Erwartungswert] \[E(X) = \frac{a+b}{2}\]
   \item[Varianz] \[\text{var}(X) = \frac{(a-b)^2}{12}\]
   \item[Median] \[\text{med}(X) = \frac{a+b}{2}\]
@@ -348,7 +348,7 @@ Sei $X$ eine in $[a,b]$ gleichverteilte Zufallsvariable, dann gilt:
   \item[Dichtefunktion] \[\phi(x) = \frac{1}{\sigma \sqrt{2\pi}} \cdot 
     e^{-\frac{1}{2}{\left(\frac{x-\mu}{\sigma}\right)}^2} =
     \frac{1}{\sigma \sqrt{2\pi}} \cdot e^{-\frac{(x-\mu)^2}{2\sigma^2}}\]
-  \item[Verteilungsfunktion] \[E(X) = \mu\]
+  \item[Erwartungswert] \[E(X) = \mu\]
   \item[Varianz] \[\text{var}(X) = \sigma^2\]
   \item[Median] \[\text{med}(X) = \mu\]
   \item[Wahrscheinlichkeit] Keine einfache Formel für
