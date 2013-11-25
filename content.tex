@@ -124,26 +124,28 @@ Charakteristische Funktion von $A$:
 \subsubsection{Begriffe}
 \begin{itemize}
   \item Varianz (Mass für die mittlere Abweichung):
-    $\text{var}(x) = E((X - E(X))^2) = E(X^2) - E(X)^2$
+    $\operatorname{var}(x) = E((X - E(X))^2) = E(X^2) - E(X)^2$
   \item Kovarianz (Verschiebungssatz):
-    $\text{cov}(X,Y) = E(XY) - E(X)E(Y)$
-  \item Abstand ($\pm$) zum Erwartungswert (Standardabweichung): $\sqrt{\text{var}(x)}$
+    $\operatorname{cov}(X,Y) = E(XY) - E(X)E(Y)$
+  \item Abstand ($\pm$) zum Erwartungswert (Standardabweichung):
+  $\sqrt{\operatorname{var}(x)}$
 \end{itemize}
 \subsubsection{Rechenregeln für Varianz}
 \begin{itemize}
   \item Multiplikation mit einem Faktor:
-    $\text{var}(\lambda X) = \lambda^2 \text{var}(X)$
+    $\operatorname{var}(\lambda X) = \lambda^2 \operatorname{var}(X)$
   \item Addition (nur wenn $X$ und $Y$ unabhängig):
-    $\text{var}(X+Y) = \text{var}(X) + \text{var}(Y)$
+    $\operatorname{var}(X+Y) = \operatorname{var}(X) + \operatorname{var}(Y)$
     \begin{itemize}
-      \item Achtung ($(-x)^2 = +x$): $\text{var}(X-Y) = \text{var}(X)
-        + \text{var}(-Y) = \text{var}(X) + \text{var}(Y)$
+      \item Achtung ($(-x)^2 = +x$): $\operatorname{var}(X-Y) =
+      \operatorname{var}(X) + \operatorname{var}(-Y) =
+      \operatorname{var}(X) + \operatorname{var}(Y)$
     \end{itemize}
-  \item Multiplikation: $\text{var}(X \cdot Y) = \text{var}(X)
-    \text{var}(Y) + \text{var}(Y)E(X)^2 + \text{var}(X)E(Y)^2$
-  \item Varianz einer Konstante $c$: $\text{var}(c) = 0$
+  \item Multiplikation: $\operatorname{var}(X \cdot Y) = \operatorname{var}(X)
+    \operatorname{var}(Y) + \operatorname{var}(Y)E(X)^2 + \operatorname{var}(X)E(Y)^2$
+  \item Varianz einer Konstante $c$: $\operatorname{var}(c) = 0$
   \item Kovarianz als Verallgemeinerung der Varianz:
-    $\text{var}(X) = \text{cov}(X,X)$
+    $\operatorname{var}(X) = \operatorname{cov}(X,X)$
 \end{itemize}
 
 \subsection{Mittelwert}
@@ -160,21 +162,21 @@ Charakteristische Funktion von $A$:
 \subsubsection{Ungleichung von Tschebyscheff}
 Wahrscheinlichkeit, dass Zufallsvariable $X$ um mehr als $\varepsilon$
 vom Erwartungswert abweicht:
-\[P(X|-\mu| > \varepsilon) \le \frac{\text{var}(X)}{\varepsilon^2} \]
+\[P(X|-\mu| > \varepsilon) \le \frac{\operatorname{var}(X)}{\varepsilon^2} \]
 \subsubsection{Wie gut ist der Mittelwert?}
 \begin{itemize}
   \item Mittelwert: $M_n = \frac{X_1 + X_2 + \ldots + X_n}{n}$
   \item Erwartungswert: $E(X_i) = E\left( \frac{X_1 + X_2 + \ldots +
   X_n}{n}\right) =  \frac{E(X_1) + E(X_2) + \ldots + E(X_n)}{n} = \mu$
-  \item Varianz: $\text{var}(X_i) = \sigma^2$
-  \item Varianz: $\text{var}(M_n) = \frac{1}{n^2} \sum_{i=1}^n
-  \text{var}(X_i) = \frac{\sigma^2}{n}$
+  \item Varianz: $\operatorname{var}(X_i) = \sigma^2$
+  \item Varianz: $\operatorname{var}(M_n) = \frac{1}{n^2} \sum_{i=1}^n
+  \operatorname{var}(X_i) = \frac{\sigma^2}{n}$
 \end{itemize}
 \paragraph{Bernoullis Gesetz der grossen Zahlen}
 Die Wahrscheinlichkeit, dass der Mittelwert von $n$ unabhängigen
 Zufallsvariabeln mit Mittelwert $\mu$ und Varianz $\sigma^2$ mehr als
 $\varepsilon$ von $\mu$ abweicht, ist:
-\[P(|X-\mu| > \varepsilon) \le \frac{\text{var}(X)}{\varepsilon^2} \]
+\[P(|X-\mu| > \varepsilon) \le \frac{\operatorname{var}(X)}{\varepsilon^2} \]
 Die Abweichung ist unwahrscheinlich, wenn:
 \begin{itemize}
   \item Varianz ist klein (genaues Messgerät)
@@ -184,17 +186,18 @@ Die Abweichung ist unwahrscheinlich, wenn:
 
 \subsection{Lineare Regression}
 Seien $X$ und $Y$ zwei reelle Zufallsvariablen. Die Gerade mit der
-Gleichung $y = ax + b$ minimiert die Varianz $\text{var}(aX + b -Y)$
+Gleichung $y = ax + b$ minimiert die Varianz $\operatorname{var}(aX + b -Y)$
 genau dann, wenn
 \begin{align*}
-  a & = \frac{\text{cov}(X,Y)}{\text{var}(X)} = \frac{E(XY)
+  a & = \frac{\operatorname{cov}(X,Y)}{\operatorname{var}(X)} = \frac{E(XY)
         - E(X)E(Y)}{E(X^2) - E(X)^2} \\
   b & = E(Y) - E(X)a
 \end{align*}
 Die Regression ist umso genauer, je näher der Regressionskoeffizient $r$
 bei $\pm 1$ liegt. Zudem hat $r$ immer das gleiche Vorzeichen wie die
 Steitung der Regressionsgerade.
-\[ r = \frac{\text{cov}(X,Y)}{\sqrt{\text{var}(X)\text{var}(Y)}} \]
+\[ r =
+\frac{\operatorname{cov}(X,Y)}{\sqrt{\operatorname{var}(X)\operatorname{var}(Y)}} \]
 
 Zur Berechnung der Regression eignet sich folgende Tabelle sehr gut,
 damit man alle Werte im Überblick hat:
@@ -266,7 +269,7 @@ damit man alle Werte im Überblick hat:
 Ist $X$ eine Zufallsvariable mit Erwartungswert $\mu$ und Varianz
 $\sigma^2$, dann ist
 \[ Y = \frac{X-\mu}{\sigma} \]
-eine neue Zufallsvariable $Y$ mit $E(Y) = 0$ und $\text{var}(Y) = 0$.
+eine neue Zufallsvariable $Y$ mit $E(Y) = 0$ und $\operatorname{var}(Y) = 0$.
 Zwischen den Verteilungsfunktionen $F_X$ und $F_Y$ bestehen die
 Beziehungen:
 \[ F_Y(y) = F_X(y\sigma+\mu) \qquad
@@ -287,8 +290,8 @@ Sei $X$ eine in $[a,b]$ gleichverteilte Zufallsvariable, dann gilt:
   \item[Wahrscheinlichkeitsdichte] \[\varphi(x) = \begin{cases} 0 & x < a \\
     \frac{1}{b-a} & x \in [a,b] \\ 0 & x > b\end{cases}\]
   \item[Erwartungswert] \[E(X) = \frac{a+b}{2}\]
-  \item[Varianz] \[\text{var}(X) = \frac{(a-b)^2}{12}\]
-  \item[Median] \[\text{med}(X) = \frac{a+b}{2}\]
+  \item[Varianz] \[\operatorname{var}(X) = \frac{(a-b)^2}{12}\]
+  \item[Median] \[\operatorname{med}(X) = \frac{a+b}{2}\]
   \item[Wahrscheinlichkeit einer grossen Abweichung] Für $\varepsilon >
   \frac{b-a}{2}$ ist die Wahrscheinlichkeit $P(|X-\mu| > \varepsilon)$
     einer Abweichung vom Erwartungswert $\mu = E(X)$ natürlich 0, aber für
@@ -304,8 +307,8 @@ Sei $X$ eine in $[a,b]$ gleichverteilte Zufallsvariable, dann gilt:
   \item[Verteilungsfuntkion] \[F(x) = \begin{cases}0 & x < 0 \\
     1-e^{-ax} & x \geq 0\end{cases}\]
   \item[Erwartungswert] \[E(X) = \frac{1}{a}\]
-  \item[Varianz] \[\text{var}(X) = \frac{1}{a^2}\]
-  \item[Median] \[\text{med}(X) = \frac{1}{a}\log 2\]
+  \item[Varianz] \[\operatorname{var}(X) = \frac{1}{a^2}\]
+  \item[Median] \[\operatorname{med}(X) = \frac{1}{a}\log 2\]
   \item[Wahrscheinlichkeit grosser Abweichung] Für eine
     exponentialverteilte Zufallsvariable mit dem Erwartungswert
     $\frac{1}{a}$ ist die Wahrscheinlichkeit einer Abweichung
@@ -323,8 +326,8 @@ Sei $X$ eine in $[a,b]$ gleichverteilte Zufallsvariable, dann gilt:
     e^{-\frac{1}{2}{\left(\frac{x-\mu}{\sigma}\right)}^2} =
     \frac{1}{\sigma \sqrt{2\pi}} \cdot e^{-\frac{(x-\mu)^2}{2\sigma^2}}\]
   \item[Erwartungswert] \[E(X) = \mu\]
-  \item[Varianz] \[\text{var}(X) = \sigma^2\]
-  \item[Median] \[\text{med}(X) = \mu\]
+  \item[Varianz] \[\operatorname{var}(X) = \sigma^2\]
+  \item[Median] \[\operatorname{med}(X) = \mu\]
   \item[Wahrscheinlichkeit] Keine einfache Formel für
     $P(|X - E(X)| > \varepsilon)$
 \end{description}
@@ -358,7 +361,7 @@ Sei $X$ eine in $[a,b]$ gleichverteilte Zufallsvariable, dann gilt:
   \[P(X = k) = \binom{n}{k} p^k(1-p)^{n-k}\]
   \item[Verteilungsfunktion] \[F(k) = \sum_{i=0}^k \binom{n}{i} p^i(1-p)^{n-i}\]
   \item[Erwartungswert] \[E(X) = np\]
-  \item[Varianz] \[\text{var}(X) = np(1-p)\]
+  \item[Varianz] \[\operatorname{var}(X) = np(1-p)\]
     Maximale Varianz wird erreicht bei $p = \frac{1}{2}$
   \item[Schlecht berechenbar] Ist $n$ und $p$ gross, dauert das
   berechnen der Wahrscheinlichkeit sehr lange. Dann kann man davon
@@ -388,7 +391,7 @@ Sei $X$ eine in $[a,b]$ gleichverteilte Zufallsvariable, dann gilt:
     in der Ereignisse auftreten).
     \[P_\lambda(k) = e^{-\lambda} \cdot \frac{\lambda^k}{k!}\]
   \item[Erwartungswert] \[E(X) = \lambda\]
-  \item[Varianz] \[\text{var}(X) = \lambda\]
+  \item[Varianz] \[\operatorname{var}(X) = \lambda\]
 \end{description}
 
 \subsubsection{Poissonverteilung als Approximation für die
@@ -398,7 +401,7 @@ Binomialverteilung}
   \item Ist $n$ bei der Binomialverteilung gross, ist diese nicht
     durchführbar (zulange Rechenzeit).
   \item Ist $X$ annähernd normalverteilt, gilt:
-    $E(X) = \mu = np$ und $\text{var}(X) = \sigma^2 = np(1-p)$
+    $E(X) = \mu = np$ und $\operatorname{var}(X) = \sigma^2 = np(1-p)$
 \end{itemize}
 Verteilfunktion:
 \[ P(X \le x) = P\left(\frac{X - \mu}{\sigma} \le
