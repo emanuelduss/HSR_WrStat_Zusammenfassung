@@ -220,6 +220,7 @@ damit man alle Werte im Überblick hat:
 \section{Wahrscheinlichkeitsverteilung}
 \subsection{Begriffe}
 \begin{itemize}
+  \item Verteilungsfunktion: $F_X(x) = P(X \le x)$
   \item Die Verteilungsfunktion $F$ einer Zufallsvariablen $X$, $F(x) =
     P(X \leq x)$, zeigt die Wahrscheinlichkeit dafür, dass $X$ den Wert
     $x$ nicht überschreitet.
@@ -241,14 +242,9 @@ damit man alle Werte im Überblick hat:
   \end{itemize}
 \end{itemize}
 
-\subsection{Wahrscheinlichkeit berechnen}
-\begin{itemize}
-   \item $F_X(x) = P(X \le x)$
-\end{itemize}
-
 \subsection{Erwartungswert berechnen}
 \begin{itemize}
-  \item $F$ ist diskret: % TODO
+  \item $F$ ist diskret: $E(X) = \sum_i x_i \cdot px(x_i)$ % TODO Verify
   \item $F$ ist stetig: $E(X) = \int_{-\infty}^{\infty}x \cdot F'(x)dx$
 \end{itemize}
 
