@@ -272,8 +272,8 @@ Beziehungen:
 \[ F_Y(y) = F_X(y\sigma+\mu) \qquad
   F_X(x)=F_Y\left(\frac{x-\mu}{\sigma}\right) \]
 Hat die Verteilungsfunktion eine Dichte, dann gilt zudem:
-\[ \phi_Y(y) = \sigma \phi_X(y\sigma+\mu) \qquad \phi_X(x) =
-  \frac{1}{\sigma} \phi_Y\left(\frac{x-\mu}\sigma\right) \]
+\[ \varphi_Y(y) = \sigma \varphi_X(y\sigma+\mu) \qquad \varphi_X(x) =
+  \frac{1}{\sigma} \varphi_Y\left(\frac{x-\mu}\sigma\right) \]
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Katalog von Wahrscheinlichkeitsverteilungen}
@@ -284,7 +284,7 @@ Sei $X$ eine in $[a,b]$ gleichverteilte Zufallsvariable, dann gilt:
   \item[Anwendung] Verteilung von Zufallszahlen
   \item[Verteilungsfunktion] \[F(x) = \begin{cases} 0 & x < a \\
     \frac{x-a}{b-a} & x \in [a,b] \\ 1 & x > b\end{cases}\]
-  \item[Wahrscheinlichkeitsdichte] \[\phi(x) = \begin{cases} 0 & x < a \\
+  \item[Wahrscheinlichkeitsdichte] \[\varphi(x) = \begin{cases} 0 & x < a \\
     \frac{1}{b-a} & x \in [a,b] \\ 0 & x > b\end{cases}\]
   \item[Erwartungswert] \[E(X) = \frac{a+b}{2}\]
   \item[Varianz] \[\text{var}(X) = \frac{(a-b)^2}{12}\]
@@ -299,7 +299,7 @@ Sei $X$ eine in $[a,b]$ gleichverteilte Zufallsvariable, dann gilt:
 \subsubsection{Exponentialverteilung}
 \begin{description}
   \item[Anwendung] Prozess ohne Erinnerungsvermögen, Radioaktivität
-  \item[Dichtefunktion] \[\phi(x) = \begin{cases}0 & x < 0 \\ ae^{-ax} &
+  \item[Dichtefunktion] \[\varphi(x) = \begin{cases}0 & x < 0 \\ ae^{-ax} &
     x \geq 0\end{cases}\]
   \item[Verteilungsfuntkion] \[F(x) = \begin{cases}0 & x < 0 \\
     1-e^{-ax} & x \geq 0\end{cases}\]
@@ -319,7 +319,7 @@ Sei $X$ eine in $[a,b]$ gleichverteilte Zufallsvariable, dann gilt:
 \begin{description}
   \item[Anwendung] Messfehler, Summe von vielen voneinander
     unabhängigenn Zufallsvariabeln, Approximation der Binomialverteilung
-  \item[Dichtefunktion] \[\phi(x) = \frac{1}{\sigma \sqrt{2\pi}} \cdot 
+  \item[Dichtefunktion] \[\varphi(x) = \frac{1}{\sigma \sqrt{2\pi}} \cdot 
     e^{-\frac{1}{2}{\left(\frac{x-\mu}{\sigma}\right)}^2} =
     \frac{1}{\sigma \sqrt{2\pi}} \cdot e^{-\frac{(x-\mu)^2}{2\sigma^2}}\]
   \item[Erwartungswert] \[E(X) = \mu\]
@@ -336,7 +336,7 @@ Sei $X$ eine in $[a,b]$ gleichverteilte Zufallsvariable, dann gilt:
   \item[Anwendung] Häufkeitsverteilung für skaleninvariante Prozesse,
     Einkommensverteilung Grösse und Häufigkeit von Mondkratern,
     Verkaufszahlen von Büchern, Einwohnerzahlen von Städten
-  \item[Dichtefunktion] \[ \phi(X) = \begin{cases} Cx^{-\alpha} & x \geq
+  \item[Dichtefunktion] \[ \varphi(X) = \begin{cases} Cx^{-\alpha} & x \geq
     x_{min} \\ 0 & x < x_{min}\end{cases} \] Typische Werte für $\alpha$:
     $1 \leq \alpha \leq 3$
   \item[Verteilungsfunktion]
@@ -379,7 +379,7 @@ Sei $X$ eine in $[a,b]$ gleichverteilte Zufallsvariable, dann gilt:
   \[F_{X_i+\dots+x_k}(x) = \begin{cases}1 - e^{-ax} \sum_{i=0}^{k-1}
   \frac{(ax)^i}{i!} & x \geq 0 \\ 0 & x < 0\end{cases}\]
   \item[Wahrscheinlichkeitsdichte]
-  \[\phi_{X_i+\dots+x_k}(x) = \begin{cases}a^k \frac{k^{k-1}}{(k-1)!}
+  \[\varphi_{X_i+\dots+x_k}(x) = \begin{cases}a^k \frac{k^{k-1}}{(k-1)!}
   e^{-ax} & x \geq 0 \\ 0 & x < 0\end{cases}\]
   \item[Wahrscheinlichkeit] Beschreibt für $\lambda = ax$ die
     Wahrscheinlichkeit, dass in einem Zeitintervall $[0, x]$ genau $k$
