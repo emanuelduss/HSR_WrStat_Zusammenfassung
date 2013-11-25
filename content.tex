@@ -6,7 +6,7 @@ ersten Position unabhängige Anzahl $n_2$ Möglichkeiten für den Rest.
 \[ = n_1 \cdot n_2 \text{ Möglichkeiten } \]
 
 \subsection{Permutationen: Reihenfolge}
-Auf wieviele Arten kann man $n$ Objekte anordnen? (Anzahl Anordnungen)
+Anzahl Anordnungen: Auf wieviele Arten kann man $n$ Objekte anordnen?
 \[ = n! \text{ Arten} \]
 
 \subsection{Kombinationen: Auswahl}
@@ -64,7 +64,7 @@ treffen?
       \item Drei Ereignisse: $P(A \cup B \cup C) \\ = P(A) + P(B) + P(C)
         - P(A \cap B) - P(A \cap C) - P(B \cap C) + P(A \cap B \cap C)$
     \end{itemize}
-  \item $P(A \setminus B) = 1 - P(A)$: Ereignis $A$ tritt ein, aber ohne
+  \item $P(A \setminus B) = P(A) - P(A \cap B)$: Ereignis $A$ tritt ein, aber ohne
     Ereignis $B$
   \item $P(\bar{A}) = P(\Omega \setminus A) = 1 - P(A)$: Ereignis $A$
     tritt nicht ein
@@ -125,6 +125,8 @@ Charakteristische Funktion von $A$:
 \begin{itemize}
   \item Varianz (Mass für die mittlere Abweichung):
     $\operatorname{var}(x) = E((X - E(X))^2) = E(X^2) - E(X)^2$
+  \item Je grösser die Varianz, desto Wahrscheinlicher sind grosse
+    Abweichungen vom Mittelwert.
   \item Kovarianz (Verschiebungssatz):
     $\operatorname{cov}(X,Y) = E(XY) - E(X)E(Y)$
   \item Abstand ($\pm$) zum Erwartungswert (Standardabweichung):
@@ -160,9 +162,9 @@ Charakteristische Funktion von $A$:
   \item Faustregel: 10 mal mehr Genauigkeit = 100 mal mehr Arbeit.
 \end{itemize}
 \subsubsection{Ungleichung von Tschebyscheff}
-Wahrscheinlichkeit, dass Zufallsvariable $X$ um mehr als $\varepsilon$
-vom Erwartungswert abweicht:
-\[P(X|-\mu| > \varepsilon) \le \frac{\operatorname{var}(X)}{\varepsilon^2} \]
+Genauigkeit des Mittelwertes: Wahrscheinlichkeit, dass Zufallsvariable
+$X$ um mehr als $\varepsilon$ vom Erwartungswert abweicht:
+\[P(|X-\mu| > \varepsilon) \le \frac{\operatorname{var}(X)}{\varepsilon^2} \]
 \subsubsection{Wie gut ist der Mittelwert?}
 \begin{itemize}
   \item Mittelwert: $M_n = \frac{X_1 + X_2 + \ldots + X_n}{n}$
@@ -195,9 +197,9 @@ genau dann, wenn
 \end{align*}
 Die Regression ist umso genauer, je näher der Regressionskoeffizient $r$
 bei $\pm 1$ liegt. Zudem hat $r$ immer das gleiche Vorzeichen wie die
-Steitung der Regressionsgerade.
-\[ r =
-\frac{\operatorname{cov}(X,Y)}{\sqrt{\operatorname{var}(X)\operatorname{var}(Y)}} \]
+Steigung der Regressionsgerade.
+\[ r = \frac{\operatorname{cov}(X,Y)}
+  {\sqrt{\operatorname{var}(X)\operatorname{var}(Y)}} \]
 
 Zur Berechnung der Regression eignet sich folgende Tabelle sehr gut,
 damit man alle Werte im Überblick hat:
@@ -227,7 +229,11 @@ damit man alle Werte im Überblick hat:
   \item Monoton wachsend: $F(b) - F(a) = P(a < X \leq b) \geq 0$ falls
     $a \leq b$
   \item Ableitung von $F$ (Wahrscheinlichkeitsdichte / Dichtefunktion):
-    $F'(x)$
+    $F'(x) = \varphi(x)$
+  \begin{itemize}
+    \item[$\Leftrightarrow$] $F(x) = \int_{-\infty}^{x} \varphi(\tau) d\tau$
+    % TODO Verify
+  \end{itemize}
   \item Formen der Zufallsvariabeln
   \begin{itemize}
     \item Diskret: $F$ ist stückweise konstant (Treppenstufen)
@@ -244,8 +250,8 @@ damit man alle Werte im Überblick hat:
 
 \subsection{Erwartungswert berechnen}
 \begin{itemize}
-  \item $F$ ist diskret: $E(X) = \sum_i x_i \cdot px(x_i)$ % TODO Verify
-  \item $F$ ist stetig: $E(X) = \int_{-\infty}^{\infty}x \cdot F'(x)dx$
+  \item $F$ ist diskret: $E(X) = \sum_i x_i \cdot p(x_i)$ % TODO Verify
+  \item $F$ ist stetig: $E(X) = \int_{-\infty}^{\infty}x \cdot \varphi(x)dx$
 \end{itemize}
 
 \subsection{Rechenregeln für die Verteilungsfunktion}
@@ -285,8 +291,8 @@ Sei $X$ eine in $[a,b]$ gleichverteilte Zufallsvariable, dann gilt:
     \frac{x-a}{b-a} & x \in [a,b] \\ 1 & x > b\end{cases}\]
   \item[Wahrscheinlichkeitsdichte] \[\varphi(x) = \begin{cases} 0 & x < a \\
     \frac{1}{b-a} & x \in [a,b] \\ 0 & x > b\end{cases}\]
-  \item[Erwartungswert] \[E(X) = \frac{a+b}{2}\]
-  \item[Varianz] \[\operatorname{var}(X) = \frac{(a-b)^2}{12}\]
+  \item[Erwartungswert] \[E(X) = \mu = \frac{a+b}{2}\]
+  \item[Varianz] \[\operatorname{var}(X) = \sigma^2 = \frac{(a-b)^2}{12}\]
   \item[Median] \[\operatorname{med}(X) = \frac{a+b}{2}\]
   \item[Wahrscheinlichkeit einer grossen Abweichung] Für $\varepsilon >
   \frac{b-a}{2}$ ist die Wahrscheinlichkeit $P(|X-\mu| > \varepsilon)$
@@ -297,13 +303,14 @@ Sei $X$ eine in $[a,b]$ gleichverteilte Zufallsvariable, dann gilt:
 
 \subsubsection{Exponentialverteilung}
 \begin{description}
-  \item[Anwendung] Prozess ohne Erinnerungsvermögen, Radioaktivität
+  \item[Anwendung] Prozess ohne Erinnerungsvermögen, radioaktiver
+  Zerfall, ermüdungsfreie Bauteile
   \item[Dichtefunktion] \[\varphi(x) = \begin{cases}0 & x < 0 \\ ae^{-ax} &
     x \geq 0\end{cases}\]
   \item[Verteilungsfuntkion] \[F(x) = \begin{cases}0 & x < 0 \\
     1-e^{-ax} & x \geq 0\end{cases}\]
-  \item[Erwartungswert] \[E(X) = \frac{1}{a}\]
-  \item[Varianz] \[\operatorname{var}(X) = \frac{1}{a^2}\]
+  \item[Erwartungswert] \[E(X) = \mu = \frac{1}{a}\]
+  \item[Varianz] \[\operatorname{var}(X) = \sigma^2 = \frac{1}{a^2}\]
   \item[Median] \[\operatorname{med}(X) = \frac{1}{a}\log 2\]
   \item[Wahrscheinlichkeit grosser Abweichung] Für eine
     exponentialverteilte Zufallsvariable mit dem Erwartungswert
@@ -312,12 +319,15 @@ Sei $X$ eine in $[a,b]$ gleichverteilte Zufallsvariable, dann gilt:
     \begin{cases}e^{-a\varepsilon-1} & \varepsilon > \frac{1}{a} \\
     1 - e^{a\varepsilon-1} + e^{-a\varepsilon-1} & \varepsilon \leq
     \frac{1}{a}\end{cases}\]
+  \item[MTBF] Mean Time Between Failure:
+    $= \mu = \sigma = \sqrt{\operatorname{var}}$
 \end{description}
 
 \subsubsection{Normalverteilung / Gaussverteilung}
 \begin{description}
   \item[Anwendung] Messfehler, Summe von vielen voneinander
-    unabhängigenn Zufallsvariabeln, Approximation der Binomialverteilung
+    unabhängigenn Zufallsvariabeln, Approximation der
+    Binomialverteilung, Rauschen
   \item[Dichtefunktion] \[\varphi(x) = \frac{1}{\sigma \sqrt{2\pi}} \cdot 
     e^{-\frac{1}{2}{\left(\frac{x-\mu}{\sigma}\right)}^2} =
     \frac{1}{\sigma \sqrt{2\pi}} \cdot e^{-\frac{(x-\mu)^2}{2\sigma^2}}\]
@@ -345,7 +355,12 @@ Sei $X$ eine in $[a,b]$ gleichverteilte Zufallsvariable, dann gilt:
 \end{description}
 
 \subsection{Diskrete Wahrscheinlichkeitsverteilungen}
-%\subsubsection{Gleichverteilung}
+\subsubsection{Gleichverteilung}
+\begin{description}
+  % TODO Andere Werte
+  \item[Erwartungswert] \[ E(X) = \frac{n+1}{2} \]
+  \item[Varianz] \[ \operatorname{var}(X) = \frac{n^2-1}{12}\]
+\end{description}
 
 \subsubsection{Binomialverteilung}
 \begin{description}
@@ -354,7 +369,8 @@ Sei $X$ eine in $[a,b]$ gleichverteilte Zufallsvariable, dann gilt:
   \item[Wahrscheinlichkeit] Eine Zufallsvariable mit diskreten Werten
     $k \in \{0, \dots, n\}$ heisst binomialverteilt zum Parameter $p$,
     wenn folgendes die Wahrscheinlichkeit des Wertes $k$ ist.
-  \[P(X = k) = \binom{n}{k} p^k(1-p)^{n-k}\]
+    Wahrscheinlichkeit, dass $X = 1$ k-mal eingetreten ist:
+    \[P(X = k) = \binom{n}{k} p^k(1-p)^{n-k}\]
   \item[Verteilungsfunktion] \[F(k) = \sum_{i=0}^k \binom{n}{i} p^i(1-p)^{n-i}\]
   \item[Erwartungswert] \[E(X) = np\]
   \item[Varianz] \[\operatorname{var}(X) = np(1-p)\]
