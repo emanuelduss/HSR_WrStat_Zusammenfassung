@@ -442,6 +442,23 @@ Poissonverteilung zum Parameter $\lambda$:
 Likelihood-Funktion
 \[ L(x_1, \dots, x_n) = \varphi(x_1) \cdot \ldots \cdot \varphi(x_n)\]
 
+\subsection{Bekannte Schätzer}
+\begin{description}
+  \item[Stichprobenmittelwert] Der Schätzer für den
+    Stichprobenmittelwert der Stichproben $X_1, \dots, X_n$ heisst:
+    \[ \hat{X} = \hat{\mu}(X_1, \dots, X_n) = \frac{X_1 + \ldots +
+    X_n}{n} = \frac{1}{n} \sum_{i=1}^{n} X_i \]
+  \item[Stichprobenvarianz] Der Schätzer für die Stichprobenvarianz der
+    Stichproben $X_1, \dots, X_n$ heisst:
+    \[ S^2 = \hat{\sigma^2}(x_1, \dots, x_n) = \frac{1}{n-1}
+    \sum_{i=1}^{n}(X_i - \overline{X})^2 = \frac{n}{n-1}\left( \frac{1}{n}
+    \sum {x_i}^2 - \left(\frac{1}{n} \sum x_i\right)^2\right)\]
+  \item[Länge eines Intervalls] Ist $X_i$ eine Stichprobe einer auf dem
+    Intervall $[0, \vartheta]$ gleichverteilten Zufallsvariable $X$, dann ist
+    folgende Formel ein erwartungstreuer Schätzer für die Intervallänge
+    $\vartheta$:
+    \[ \hat{\vartheta} = \frac{n+1}{n} \operatorname{max}(X_1, \dots, X_n)\]
+\end{description}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Anhang}
