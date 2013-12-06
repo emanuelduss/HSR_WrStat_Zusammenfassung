@@ -489,6 +489,29 @@ Likelihood-Funktion
     \item Falsifizierbar: Messgrösse, die entweder wahr oder falsch ist
   \end{itemize}
 \end{itemize}
+
+\subsection{Testen der Wahrscheinlichkeit eines Ereignisses}
+\subsubsection{Zwei Versuchsausgänge}
+\subsubsection{Mehrere Versuchsausgänge}
+\begin{tabular}{|l|l|l|l|l|l|}
+  \hline
+  Mögliche Werte & Wahrscheinlichkeit ($p_i$) & Anzahl Ereignisse ($n_i$) & $np_i$ & $n_i - np_i$ & $\frac{(n_i - np_i)^2}{np_i}$ \\
+  \hline
+  \hline
+  Gelb    &   0.25    &  11       &   15.75    &  4.75    &  1.432 \\
+  Orange  &   0.25    &  23       &   15.75    &  7.25    &  3.34  \\
+  Rot     &   0.25    &  10       &   15.75    &  5.75    &  2.09  \\
+  Grün    &   0.25    &  19       &   15.75    &  3.25    &  0.67  \\
+  \hline
+  \hline
+  Total   &   1       &  63 = $n$ &   15.75    &          & $D$    \\
+  \hline
+\end{tabular}
+
+Diskrepanz $D$ (Abweichung von der Nullhypothese):
+\[ D = \sum \frac{(n_i - np_i)^2}{np_i} \]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Anhang}
 \subsection{Summenformeln}
 \[ \begin{aligned}
