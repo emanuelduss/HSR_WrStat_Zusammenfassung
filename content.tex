@@ -490,7 +490,7 @@ Likelihood-Funktion
   \end{itemize}
 \end{itemize}
 
-\subsection{Testen der Wahrscheinlichkeit eines Ereignisses}
+\subsection{Testen der Wahrscheinlichkeit eines Ereignisses (Diskret)}
 \subsubsection{Zwei Versuchsausgänge}
 \subsubsection{Mehrere Versuchsausgänge}
 \begin{tabular}{|l|l|l|l|l|l|}
@@ -510,6 +510,64 @@ Likelihood-Funktion
 
 Diskrepanz $D$ (Abweichung von der Nullhypothese):
 \[ D = \sum \frac{(n_i - np_i)^2}{np_i} \]
+
+Die Diskrepanz $D$ ist für genügend grosse $n$ annhährend $\chi^2$
+verteilt mit $k$ Freiheitsgraden.
+
+Ist $D < D_{\text{Krit}}$, gibt es keinen Grund an der Nullhypothese zu
+zweifeln.
+
+Einschränkungen:
+\begin{itemize}
+  \item Bei wenigen Testdaten nicht anwendbar
+  \item Ist $p_i$ klein, sind sehr viele Beobachtungen nötig
+  \item Faustregel: Jedes Intervall sollte mindestens 5 Einträge haben:
+    $n_i \geq 5$
+\end{itemize}
+
+\subsection{Testen der Wahrscheinlichkeit eines Ereignisses (Stetig)}
+\subsubsection{Kolmogoroff-Smirnov-Test}
+\begin{itemize}
+  \item Nullhypothese: Daten sind gemäss der Verteilungsfunktion $F$
+    verteilt.
+  \item Hypothese: ``Das ist nicht so.''
+  \item Idee: Unterschied zwischen der Verteilfunktion $F$
+    und der gemessenen Verteilfunktion $F_{\text{Empirisch}}$ messen.
+  \item Gesucht: Grösste Abweichung zwischen $F$ und $F_{\text{Empirisch}}$
+\end{itemize}
+
+\[ F_{\text{Empirisch}}(x) = \frac{|\{x_i | X_i \leq x\}|}{n} \]
+
+Berechnung mit Tabelle (Die $x_j$ Werte müssen aufsteigend sortiert
+sein!):
+
+\begin{tabular}{|l|l|l|l|l|}
+  \hline
+  $j$        & $x_j$     & $F(x_j)$    & $\frac{j}{n}-F(x_i)$  & $F(x_j) - \frac{j-1}{n}$ \\
+  \hline
+  \hline
+  1         &           &           &            &          \\
+  2         &           &           &            &          \\
+  $\vdots$  &           &           &            &          \\
+  n         &           &           &            &          \\
+  \hline
+  \hline
+          &           &  & $\operatorname{max}(...)$ & $\operatorname{max}(...)$ \\
+  \hline
+\end{tabular}
+
+
+\[ K_n^+ = \sqrt{n} \cdot \max_{-\infty<x<\infty} \left(\frac{j}{n} - F(x_j)\right)
+, \qquad
+K_n^- = \sqrt{n} \cdot \max_{-\infty<x<\infty} \left(F(x_j) - \frac{j-1}{n} \right) \]
+
+Der kritische Wert $K_{\text{krit}}$ kann man aus der Tabelle auslesen.
+Ist $k_{\text{krit}} > K^\pm$, ist die Nullhypothese falsch.
+
+Wie ist die Verteilung von $F(X)$?
+
+\[ F_{F(X)}(X) = P(F(X) \leq x) = P(X \leq F^{-1}(x)) = F_X(F^{-1}(x)) =
+x \]
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Anhang}
