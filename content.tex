@@ -569,6 +569,26 @@ Wie ist die Verteilung von $F(X)$?
 \[ F_{F(X)}(X) = P(F(X) \leq x) = P(X \leq F^{-1}(x)) = F_X(F^{-1}(x)) =
 x \]
 
+\subsubsection{t-Test}
+\begin{itemize}
+  \item Nullhypothese: Zwischen zwei Messreihen gibt es kein Unterschied
+    (Messreihen sind normalverteilt).
+  \item Hypothese: Es gibt einen Unterschied.
+  \item Nützlich, wenn beide Messreihen grosse Unterschiede haben
+    (Varianz ist gross)
+  \item Anzahl Messungen für $X$: $n$ und Anzahl Messungen für $Y$: $m$
+  \item Zwei Mittelwerte der Messreihe $X$ unx $Y$:
+    $\overline{X} = \mu_x$ und $\overline{Y} = \mu_y$
+  \item Varianz von $X$: ${S_X}^2 = \operatorname{var}(X)$ und Varianz
+    von $Y$: $d {S_Y}^2 = \operatorname{var}(Y)$
+\end{itemize}
+
+\[ T = \frac{\overline{X} - \overline{Y}}{\sqrt{(n-1) {S_X}^2 + (m-1)
+{S_Y}^2}} \cdot \sqrt{\frac{nm(n+m-2)}{n+m}}\]
+
+$T$ ist t-Verteilt (vgl. Tabelle). Man legt ein $\alpha$ fest und berechnet den
+kritischen Wert. Ist $t > t_{krit}$, verwirft man die Nullhypothese.
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Anhang}
 \subsection{Summenformeln}
