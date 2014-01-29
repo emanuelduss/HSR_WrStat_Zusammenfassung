@@ -1,3 +1,4 @@
+#!/usr/bin/R -f
 #
 # Diverse Verteilungen plotten
 #
