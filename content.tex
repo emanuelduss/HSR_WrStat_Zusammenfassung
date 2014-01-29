@@ -27,6 +27,15 @@ Merkmal tragen, deren $m$ mit dem Merkmal zu finden ist:
 
 \[ \frac{\binom{M}{n} \binom{N-M}{n-m}}{\binom{N}{n}} \]
 
+Wie gross ist die Wahrscheinlichkeit $i$ Items einer Art (von welcher es $a$ gibt) aus der Menge (mit Grösse $m$) mit einer Stichprobengrösse $s$ auszuwählen?
+\[ = \frac{
+	\begin{pmatrix}m-a\\s-i\end{pmatrix}
+	*
+	\begin{pmatrix}a\\i\end{pmatrix}
+}
+{	\begin{pmatrix}m\\s\end{pmatrix}
+} \]
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Ereignisse und Wahrscheinlichkeit}
 \subsection{Wahrscheinlichkeitsexperimente}
@@ -136,7 +145,7 @@ Charakteristische Funktion von $A$:
 \subsubsection{Begriffe}
 \begin{itemize}
   \item Varianz (Mass für die mittlere Abweichung):
-    $\operatorname{var}(x) = E((X - E(X))^2) = E(X^2) - E(X)^2$
+    $\operatorname{var}(x) = E((X - E(X))^2) = E(X^2) - E(X)^2 = \sum((x-E(x))^2*p(x))$
   \item Je grösser die Varianz, desto Wahrscheinlicher sind grosse
     Abweichungen vom Mittelwert.
   \item Kovarianz (Verschiebungssatz):
