@@ -21,6 +21,15 @@ Auf wieviele Arten kann man $k$ Mal eine Auswahl aus $n$ Objekten
 treffen?
 \[ = n^k \text{ Arten} \]
 
+Wie gross ist die Wahrscheinlichkeit $i$ Items einer Art (von welcher es $a$ gibt) aus der Menge (mit Grösse $m$) mit einer Stichprobengrösse $s$ auszuwählen?
+\[ = \frac{
+	\begin{pmatrix}m-a\\s-i\end{pmatrix}
+	*
+	\begin{pmatrix}a\\i\end{pmatrix}
+}
+{	\begin{pmatrix}m\\s\end{pmatrix}
+} \]
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Ereignisse und Wahrscheinlichkeit}
 \subsection{Wahrscheinlichkeitsexperimente}
