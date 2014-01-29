@@ -531,6 +531,15 @@ Likelihood-Funktion
 \subsection{Testen der Wahrscheinlichkeit eines Ereignisses (Diskret)}
 \subsubsection{Zwei Versuchsausgänge}
 \subsubsection{Mehrere Versuchsausgänge}
+\begin{itemize}
+  \item Nullhypothese: Farbe der Sugus ist Gleichverteilt.
+  \item Hypothese: Dem ist nicht so.
+\end{itemize}
+Diskrepanz $D$ (Abweichung von der Nullhypothese) berechnen:
+\[ D = \sum \frac{(n_i - np_i)^2}{np_i} \]
+
+Mit Hilfe dieser Tabelle:
+
 \begin{tabular}{|l|l|l|l|l|l|}
   \hline
   Mögliche Werte & Wahrscheinlichkeit ($p_i$) & Anzahl Ereignisse ($n_i$) & $np_i$ & $n_i - np_i$ & $\frac{(n_i - np_i)^2}{np_i}$ \\
@@ -546,11 +555,9 @@ Likelihood-Funktion
   \hline
 \end{tabular}
 
-Diskrepanz $D$ (Abweichung von der Nullhypothese):
-\[ D = \sum \frac{(n_i - np_i)^2}{np_i} \]
 
 Die Diskrepanz $D$ ist für genügend grosse $n$ annhährend $\chi^2$
-verteilt mit $k$ Freiheitsgraden.
+verteilt mit $k$ Freiheitsgraden ($k = $ Anzahl Ausgänge $-1$).
 
 Ist $D < D_{\text{Krit}}$, gibt es keinen Grund an der Nullhypothese zu
 zweifeln.
