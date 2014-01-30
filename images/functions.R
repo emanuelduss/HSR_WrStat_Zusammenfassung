@@ -8,7 +8,7 @@ attach(mtcars) # Multilayout
 # layout(matrix(c(1,1,2,3), 2, 2, byrow = TRUE)) # oder par(mfrow=c(2,2))
 
 # Normalverteilung
-pdf("normalverteilung.pdf")
+pdf("normalverteilung_generated.pdf")
 layout(matrix(c(1,1,2,3), 2, 2, byrow = TRUE))
 
 z = rnorm(1000)
@@ -23,7 +23,7 @@ fx = pnorm(x)
 plot(x, fx, type = "l", main = "Verteilungsfunktion", xlab = "x", ylab = "F(x)")
 
 # Gleichverteilung
-pdf("gleichverteilung.pdf")
+pdf("gleichverteilung_generated.pdf")
 layout(matrix(c(1,1,2,3), 2, 2, byrow = TRUE))
 
 z = runif(1000)
@@ -38,7 +38,7 @@ fx = punif(x)
 plot(x, fx, type = "l", main = "Verteilungsfunktion", xlab = "x", ylab = "F(x)")
 
 # Exponentialverteilung
-pdf("exponentialverteilung.pdf")
+pdf("exponentialverteilung_generated.pdf")
 layout(matrix(c(1,1,2,3), 2, 2, byrow = TRUE))
 
 z = rexp(1000)
