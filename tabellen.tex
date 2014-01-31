@@ -1,27 +1,32 @@
 \subsubsection{Quantilen der Normalverteilung}
+\begin{itemize}
+  \item Verteilungsfunktion der standardisierten Normalverteilung: $F(x) = p$
+\end{itemize}
 \begin{figure}[!h]
   \begin{center}
     \scriptsize
-    \begin{tabular}{|l|r|}
+    \begin{tabular}{|l|r||l|r|}
       \hline
-      $p$&$x$ \\
+      $p$&$x$ & $p$ & $x$ \\
       \hline
-      0.75&0.6745 \\
-      0.8&0.8416 \\
-      0.9&1.2816 \\
-      0.95&1.6449 \\
-      0.975&1.9600 \\
-      0.99&2.3263 \\
-      0.995&2.5758 \\
-      0.999&3.0902 \\
-      0.9995&3.2905 \\
+      0.75&0.6745 & 0.25 & -0.6745 \\
+      0.8&0.8416 & 0.2 & -0.8416 \\
+      0.9&1.2816 & 0.1 & -1.2816 \\
+      0.95&1.6449 & 0.05 & -1.6449 \\
+      0.975&1.9600 & 0.025 & -1.9510 \\
+      0.99&2.3263 & 0.01 & -2.3263 \\
+      0.995&2.5758 & 0.005 & -2.5758 \\
+      0.999&3.0902 & 0.001 & -3.0902 \\
+      0.9995&3.2905 & 0.0005 & -3.2905 \\
       \hline
     \end{tabular}
   \end{center}
 \end{figure}
 \begin{itemize}
-  \item Muss Standardisiert sein: Mit $E(X) = 0$ und 
-    $\operatorname{var} = 1$ 
+  \item Muss Standardisiert sein: Mit $E(X) = 0$ und
+    $\operatorname{var} = 1$
+  \item In \texttt{R}: \texttt{qnorm(p)}
+  \item $1-p = -x$
 \end{itemize}
 
 \pagebreak
