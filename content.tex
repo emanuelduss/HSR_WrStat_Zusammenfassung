@@ -21,20 +21,21 @@ Auf wieviele Arten kann man $k$ Mal eine Auswahl aus $n$ Objekten
 treffen?
 \[ = n^k \text{ Arten} \]
 
+\subsection{Hypergeometrische Verteilung}
+
 Die Wahrscheinlichkeit, bei einer $n$ Elemente umfassenden Stichprobe
 aus einer $N$ Elemente grossen Gesamtheit, in der $M$ ein bestimmtes
 Merkmal tragen, deren $m$ mit dem Merkmal zu finden ist:
+\[ = \frac{\begin{pmatrix}M\\n\end{pmatrix} \cdot
+  \begin{pmatrix}N-M\\n-m\end{pmatrix}}
+  {\begin{pmatrix}N\\n\end{pmatrix}} \]
 
-\[ \frac{\binom{M}{n} \binom{N-M}{n-m}}{\binom{N}{n}} \]
-
-Wie gross ist die Wahrscheinlichkeit $i$ Items einer Art (von welcher es $a$ gibt) aus der Menge (mit Grösse $m$) mit einer Stichprobengrösse $s$ auszuwählen?
-\[ = \frac{
-	\begin{pmatrix}m-a\\s-i\end{pmatrix}
-	*
-	\begin{pmatrix}a\\i\end{pmatrix}
-}
-{	\begin{pmatrix}m\\s\end{pmatrix}
-} \]
+Wie gross ist die Wahrscheinlichkeit $i$ Items einer Art (von welcher es
+$a$ gibt) aus der Menge (mit Grösse $m$) mit einer Stichprobengrösse $s$
+auszuwählen?
+\[ = \frac{\begin{pmatrix}m-a\\s-i\end{pmatrix} \cdot
+  \begin{pmatrix}a\\i\end{pmatrix}}
+  {\begin{pmatrix}m\\s\end{pmatrix}} \]
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Ereignisse und Wahrscheinlichkeit}
