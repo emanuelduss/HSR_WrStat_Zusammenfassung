@@ -12,12 +12,17 @@
 \usepackage[sc]{mathpazo}    % Palatino Schriftart
 \renewcommand\sfdefault{ppl}
 
+\usepackage[toc,page]{appendix}
+
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
-\usepackage{ngerman}
+\usepackage[ngerman]{babel}	% bessere Sprachunterstützung
 \usepackage{graphicx}
 \usepackage{color}
 \usepackage{ccicons}
+
+\addto\captionsngerman{\let\appendixtocname\appendixname%	% Deutsche Sprache 
+\let\appendixpagename\appendixname}				% erzweingen
 
 \usepackage[colorlinks=true, linkcolor=blue, urlcolor=blue, citecolor=blue]{hyperref}
 
