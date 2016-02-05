@@ -23,10 +23,10 @@
   \end{center}
 \end{figure}
 \begin{itemize}
-  \item Muss Standardisiert sein: Mit $E(X) = 0$ und
-    $\operatorname{var} = 1$
-  \item In \texttt{R}: \texttt{qnorm(p)}
+  \item Muss Standardisiert sein: Mit $E(X) = 0$ und $\operatorname{var} = 1$
   \item $1-p = -x$
+  \item In \texttt{R}: \texttt{qnorm(p)}
+  \item Mit \texttt{TI-Nspire}: \texttt{invNorm($p,E(X),\operatorname{var}$)} bzw. \texttt{normCdf($-\infty,x,E(X),\operatorname{var}$)}
 \end{itemize}
 
 \pagebreak
@@ -131,6 +131,7 @@ $x$&+0.00&+0.01&+0.02&+0.03&+0.04&+0.05&+0.06&+0.07&+0.08&+0.09\\
   \item $p = 1 - \alpha$
   \item Wenn nichts anderes angegeben:
     $\alpha = 0.05 \Rightarrow p = 0.95$ wählen.
+    \item Mit \texttt{TI-Nspire}: \texttt{inv$\chi^2$($p,k$)} bzw. \texttt{$\chi^2$Cdf($-\infty,x,k$)}
 \end{itemize}
 
 \pagebreak
@@ -229,4 +230,5 @@ $10^6$&0.6745&0.8416&1.2816&1.6449&1.9600&2.3264&2.5758\\
 
 \begin{itemize}
   \item Freiheitsgrade: $k = n + m - 2$
+  \item Mit \texttt{TI-Nspire}: \texttt{invt($p,k$)} bzw. \texttt{tCdf($-\infty,x,k$)}
 \end{itemize}
